@@ -7,6 +7,7 @@ import com.brandon3055.brandonscore.common.utills.ItemNBTHelper;
 import com.brandon3055.draconicevolution.DraconicEvolution;
 import com.brandon3055.draconicevolution.client.keybinding.KeyBindings;
 import com.brandon3055.draconicevolution.common.handler.ConfigHandler;
+import com.brandon3055.draconicevolution.common.items.tools.DraconicDistructionStaff;
 import com.brandon3055.draconicevolution.common.lib.References;
 import com.brandon3055.draconicevolution.common.network.ToolModePacket;
 import com.brandon3055.draconicevolution.common.utills.IConfigurableItem;
@@ -136,8 +137,10 @@ public class ToolBase extends RFItemBase {
         List<ItemConfigField> list = super.getFields(stack, slot);
         if (!getToolClasses(stack).isEmpty())
             list.add(new ItemConfigField(References.FLOAT_ID, slot, References.DIG_SPEED_MULTIPLIER).setMinMaxAndIncromente(0f, 1f, 0.01f).readFromItem(stack, 1f).setModifier("PERCENT"));
-        if (!getToolClasses(stack).isEmpty())
+        if (!getToolClasses(stack).isEmpty() && !(this instanceof DraconicDistructionStaff))
             list.add(new ItemConfigField(References.BOOLEAN_ID, slot, References.BASE_SAFE_AOE).readFromItem(stack, false));
+        else if (this instanceof DraconicDistructionStaff)
+            list.add(new ItemConfigField(References.BOOLEAN_ID, slot, References.BASE_SAFE_AOE).readFromItem(stack, true));
         return list;
     }
 
