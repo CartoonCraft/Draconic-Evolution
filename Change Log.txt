@@ -1,3 +1,6 @@
+######## 1.0.2h-CCa ########
+-disables Update Checker
+
 ######## 1.0.2h-CC ########
 -enables AOE Safe Mode by default on DraconicDistructionStaff
 
