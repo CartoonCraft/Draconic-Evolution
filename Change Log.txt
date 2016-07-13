@@ -1,3 +1,6 @@
+######## 1.0.2h-CC ########
+-enables AOE Safe Mode by default on DraconicDistructionStaff
+
 ######## 1.0.2h ########
 -added config option to disable flight.
 -removed some log spam.
