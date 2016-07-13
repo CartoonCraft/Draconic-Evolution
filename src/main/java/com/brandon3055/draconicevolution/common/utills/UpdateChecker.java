@@ -22,13 +22,13 @@ public class UpdateChecker {
 
     public UpdateChecker() {
         thread = new UpdateCheckThread();
-        thread.start();
+        //thread.start();
     }
 
 
     @SubscribeEvent
     public void tickStart(TickEvent.PlayerTickEvent event) {
-        if (event.phase != TickEvent.Phase.START) return;
+        /*if (event.phase != TickEvent.Phase.START) return;
         if (delay > 0) {
             delay--;
             return;
@@ -59,7 +59,7 @@ public class UpdateChecker {
             event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.DARK_PURPLE + "[Draconic Evolution]" + EnumChatFormatting.RED + " Version check failed"));
             if (!StringUtils.isNullOrEmpty(thread.getNote()))
                 event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.RED + thread.getNote()));
-        }
+        }*/
 
 
     }
