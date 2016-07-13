@@ -53,6 +53,8 @@ dependencies {
     compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.NEI_version}:dev"
 
     if (file('../BrandonsCore/').exists()) compile project('../BrandonsCore')
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 processResources
